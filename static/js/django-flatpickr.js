@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             if (config.linked_to) linked_configs.push(config);
             flatpickr_db[config.id] = {
                 config: config,
-                instance: flatpickr(inputWrapper || inputElement, config.options)
+                instance: inputElement._flatpickr || flatpickr(inputWrapper || inputElement, config.options)
             }
         }
     });
